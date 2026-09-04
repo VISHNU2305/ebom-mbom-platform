@@ -68,6 +68,8 @@ Then open `http://127.0.0.1:8000`
 
 ## Known limitations
 
-- Sample eBOM data is synthetically generated, not pulled from a real PDM system (the `ingest.py` layer is designed so a real PDM connector could be swapped in without touching downstream logic)
-- Manufacturing rules cover a small set of material families as a proof of concept
+- All 4 sample products are synthetically generated for demonstration, not pulled from a real PDM/CAD system — the `ingest.py` layer is designed so a real PDM connector could be swapped in without touching downstream logic
+- The manufacturing rule set (routing steps, fastener/consumable injection) covers a representative but not exhaustive set of materials and part categories — a production system would need a much larger, engineer-validated rule library
+- The natural-language query feature uses keyword-based intent matching rather than true NLU — it correctly handles the question types it's designed for, but isn't a general-purpose chatbot
+- Free-tier hosting (Render) spins down after inactivity, so the first request after idle time can take 30-50 seconds
 
