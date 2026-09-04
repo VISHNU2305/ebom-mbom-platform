@@ -35,6 +35,19 @@ CAD/PDM export (CSV)
 → genai_query.py (natural-language Q&A, retrieval-grounded)
 → web_ui.py (FastAPI + dashboard)
 
+## Screenshots
+
+**Dashboard overview**
+![Dashboard](docs/screenshots/dashboard.png)
+
+**mBOM table (converted output)**
+![mBOM Table](docs/screenshots/mbom.png)
+
+**Validation issues (caught before conversion)**
+![Validation Issues](docs/screenshots/validation-issues.png)
+
+**Natural-language querying**
+![Ask a Question](docs/screenshots/ask-question.png)
 
 ## Tech stack
 
