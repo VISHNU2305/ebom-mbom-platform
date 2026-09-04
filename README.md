@@ -2,8 +2,7 @@
 
 A rule-based platform that converts Engineering Bills of Materials (eBOM) into Manufacturing Bills of Materials (mBOM), with built-in data validation and a natural-language query interface powered by GenAI.
 
-**Live demo:** _[add your Render URL here once deployed]_
-
+**Live demo:** https://ebom-mbom-platform.onrender.com/
 ---
 
 ## Problem
@@ -17,9 +16,12 @@ Converting eBOM → mBOM is traditionally a manual, error-prone process. This pr
 1. **Ingests** an eBOM export (simulating a 3D-CAD/PDM system output)
 2. **Validates** the data — catches duplicate part numbers, orphaned parts, missing materials, and other integrity issues *before* conversion
 3. **Converts** eBOM → mBOM using explicit, auditable manufacturing rules (routing steps by material family, automatic fastener/consumable injection for structural parts)
-4. **Persists** everything to a database
-5. **Answers natural-language questions** about the data (e.g. "what are the manufacturing-only parts?") using a retrieval-grounded GenAI layer — the LLM only summarizes real retrieved data, never invents facts
-6. **Displays** all of this through a live web dashboard
+4. **Supports multiple sample products** via a dropdown (conveyor drive unit, CNC spindle assembly, injection molding clamp, robot arm joint) — proving the pipeline is fully data-driven, not hardcoded to one product
+5. **Applies expanded, realistic manufacturing rules** based on material and part type — not just fasteners, but shielding gas, anodizing, passivation, mold release agents, lubrication, gaskets, and quality inspection sign-offs
+6. **Explains every result in plain English** for non-technical viewers, alongside the technical table view
+7. **Persists** everything to a database
+8. **Answers natural-language questions** about the data (e.g. "what are the manufacturing-only parts?") using a retrieval-grounded GenAI layer — the LLM only summarizes real retrieved data, never invents facts
+9. **Displays** all of this through a live web dashboard
 
 ## Why rule-based, not ML, for the conversion logic
 
